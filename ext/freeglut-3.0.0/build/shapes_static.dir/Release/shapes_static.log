@@ -1,0 +1,5 @@
+﻿  Building Custom Rule F:/2022a/HairSimulation/ext/freeglut-3.0.0/CMakeLists.txt
+  shapes.c
+  glmatrix.c
+  Generating Code...
+  shapes_static.vcxproj -> F:\2022a\HairSimulation\ext\freeglut-3.0.0\build\bin\Release\shapes_static.exe

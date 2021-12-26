@@ -1,8 +1,8 @@
+#define _CRT_SECURE_NO_WARNINGS
+
 #include "hair.h"
 #include "input.h"
-#include "physics.h"
-
-#define _CRT_SECURE_NO_WARNINGS
+#include "simu.h"
 
 /* Write a screenshot, in the PPM format, to the specified filename, in PPM format */
 void saveScreenshot(int windowWidth, int windowHeight, char *filename)
@@ -153,7 +153,7 @@ void readWorld (char * fileName, struct world * hair, double offsetX, double off
   int i,j,k;
   FILE * file;
   
-  file = fopen(fileName, "r");
+ file= fopen(fileName, "r");
   if (file == NULL) {
     printf ("can't open file\n");
     exit(1);
@@ -259,7 +259,7 @@ void readWorld (char * fileName, struct world * hair, double offsetX, double off
 			hair->p0[i].z = hair->p[i].z;
   }
 
-  // smoothing(hair);  // FIXME
+  smoothing(hair);  // FIXME
   // TODO: might need to initialize frames
   getFrames(hair, hair->F0); 
   getInitialReferenceVectors(hair);

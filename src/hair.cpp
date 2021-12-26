@@ -1,7 +1,9 @@
+#define _CRT_SECURE_NO_WARNINGS 
 #include "hair.h"
 #include "show.h"
 #include "input.h"
-#include "physics.h"
+#include "simu.h"
+
 
 // camera parameters
 double Theta = pi / 6;

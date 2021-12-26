@@ -6,7 +6,6 @@ void computeAcceleration(struct world * hair, struct world *collider, struct poi
 // perform one step of Euler and Runge-Kutta-4th-order integrators
 // updates the hair structure accordingly
 void Euler(struct world * hair, struct world * collider);
-void RK4(struct world * hair);
 
 void stretchSpringForce(struct world *hair);
 void smoothing(struct world *hair);
@@ -23,4 +22,5 @@ void dampingForces(struct world *hair, struct point a[numPoints]);
 void stretchDampingForce(struct world *hair); 
 void bendDampingForce(struct world *hair);
 void integrateForces(struct world* hair);
+void coreSpringForce(struct world* hair);
 #endif

@@ -52,7 +52,8 @@ struct world
   double kCollision; // Hook's elasticity coefficient for collision springs
   double dCollision; // Damping coefficient collision springs
   double mass; // mass of each of control points, mass assumed to be equal for every control point
- 
+  int incPlanePresent; // Is the inclined plane present? 1 = YES, 0 = NO (always NO in this assignment)
+  double a, b, c, d; // inclined plane has equation a * x + b * y + c * z + d = 0; if no inclined plane, these four fields are not used
   int resolution; // resolution for the 3d grid specifying the external force field; value of 0 means that there is no force field
   struct point * forceField;  // pointer to the array of values of the force field
   struct point p[numPoints];  // position of control points
